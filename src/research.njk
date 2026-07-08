@@ -6,22 +6,28 @@ permalink: /research/
 <section class="page">
   <h1 class="page-title">Research</h1>
   <p>
-    I work on world models and 3D scene understanding, advised by
-    <a href="{{ site.advisor }}">Dan Yamins</a> at Stanford. Selected papers below.
+    I build <strong>foundation models for spatial and physical intelligence</strong> — world models
+    that perceive, simulate, and reason about the physical 3D world. I'm advised by
+    <a href="{{ site.advisor }}">Dan Yamins</a> in the NeuroAI Lab at Stanford. Selected papers,
+    grouped by theme:
   </p>
 
-  <ol class="pub-list">
-    <li><a href="https://arxiv.org/abs/2605.24321">Unified 3D Scene Understanding Through Physical World Modeling</a></li>
-    <li><a href="https://arxiv.org/abs/2606.27575">Perceptual 3D Simulation with Physical World Modeling</a></li>
-    <li><a href="https://arxiv.org/abs/2606.00439">Physical Object Understanding with a Physically Controllable World Model</a></li>
-    <li><a href="https://arxiv.org/abs/2509.09737">World Modeling with Probabilistic Structure Integration</a></li>
-    <li><a href="https://www.arxiv.org/abs/2507.16038">Discovering and using Spelke segments</a></li>
-    <li><a href="https://arxiv.org/abs/2507.09082">Taming generative video models for zero-shot optical flow extraction</a></li>
-    <li><a href="https://openreview.net/pdf?id=1QjCzP0KIw">Unsupervised 3D Scene Representation Learning via Movable Object Inference</a></li>
-    <li><a href="https://arxiv.org/abs/2312.06721">Understanding Physical Dynamics with Counterfactual World Modeling</a></li>
-    <li><a href="https://arxiv.org/abs/2306.01828">Unifying (Machine) Vision via Counterfactual World Modeling</a></li>
-    <li><a href="https://pubs.acs.org/doi/10.1021/acs.nanolett.3c03388">Moiré-Assisted Strain Transfer in Vertical van der Waals Heterostructures</a></li>
-    <li><a href="https://www.sciencedirect.com/science/article/pii/S2211285520311113">Versatile neuromorphic electronics by an all-in-one solution processable technology</a></li>
-    <li><a href="https://www.sciencedirect.com/science/article/pii/S2211285520311113">Fabrication of piezoresistive Si nanorod-based pressure sensor arrays</a></li>
-  </ol>
+  {% for theme in publications.themes %}
+    <h2 class="theme-title">{{ theme.name }}</h2>
+    {% for p in theme.papers %}
+      <div class="pub">
+        <div class="pub-title">
+          {% if p.arxiv %}<a href="{{ p.arxiv }}">{{ p.title }}</a>
+          {% elif p.link %}<a href="{{ p.link }}">{{ p.title }}</a>
+          {% else %}{{ p.title }}{% endif %}
+        </div>
+        {% if p.authors %}
+          <div class="pub-authors">{{ p.authors | replace("Wanhee Lee", "<strong>Wanhee Lee</strong>") | safe }}</div>
+        {% endif %}
+        <div class="pub-venue">
+          <span class="venue">{{ p.venue }}</span>{% if p.arxiv %} &nbsp;·&nbsp; <a href="{{ p.arxiv }}">arXiv</a>{% endif %}{% if p.project %} &nbsp;·&nbsp; <a href="{{ p.project }}">project page</a>{% endif %}{% if p.link and not p.arxiv %} &nbsp;·&nbsp; <a href="{{ p.link }}">pdf</a>{% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  {% endfor %}
 </section>

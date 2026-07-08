@@ -1,0 +1,75 @@
+{
+  "themes": [
+    {
+      "name": "3D Scene Understanding Through Physical World Modeling",
+      "papers": [
+        {
+          "title": "Unified 3D Scene Understanding Through Physical World Modeling",
+          "authors": "Wanhee Lee, Klemen Kotar, Rahul Mysore Venkatesh, Jared Watrous, Honglin Chen, Khai Loong Aw, Daniel L. K. Yamins",
+          "venue": "ICLR 2026",
+          "arxiv": "https://arxiv.org/abs/2605.24321"
+        },
+        {
+          "title": "Perceptual 3D Simulation with Physical World Modeling",
+          "authors": "Wanhee Lee, Klemen Kotar, Rahul Mysore Venkatesh, Jared Watrous, Daniel L. K. Yamins",
+          "venue": "CVPR 2026",
+          "arxiv": "https://arxiv.org/abs/2606.27575"
+        }
+      ]
+    },
+    {
+      "name": "Physical World Modeling from Scratch",
+      "papers": [
+        {
+          "title": "Physical Object Understanding with a Physically Controllable World Model",
+          "authors": "Rahul Venkatesh, Klemen Kotar, Lilian Naing Chen, Wanhee Lee, Gia Ancone, Seungwoo Kim, Luca Thomas Wheeler, Jared Watrous, Honglin Chen, Daniel Bear, Stefan Stojanov, Daniel L. K. Yamins",
+          "venue": "CVPR 2026 (Highlight)",
+          "arxiv": "https://arxiv.org/abs/2606.00439"
+        },
+        {
+          "title": "World Modeling with Probabilistic Structure Integration",
+          "authors": "Klemen Kotar, Wanhee Lee, Rahul Venkatesh, Honglin Chen, Daniel Bear, Jared Watrous, Simon Kim, Khai Loong Aw, Lilian Naing Chen, Stefan Stojanov, Kevin Feigelis, Imran Thobani, Alex Durango, Khaled Jedoui, Atlas Kazemian, Dan Yamins",
+          "venue": "arXiv 2025",
+          "arxiv": "https://arxiv.org/abs/2509.09737"
+        },
+        {
+          "title": "Discovering and using Spelke segments",
+          "authors": "Rahul Venkatesh, Klemen Kotar, Lilian Naing Chen, Seungwoo Kim, Luca Thomas Wheeler, Jared Watrous, Ashley Xu, Gia Ancone, Wanhee Lee, Honglin Chen, Daniel Bear, Stefan Stojanov, Daniel Yamins",
+          "venue": "arXiv 2025",
+          "arxiv": "https://arxiv.org/abs/2507.16038",
+          "project": "https://neuroailab.github.io/spelke_net"
+        },
+        {
+          "title": "Taming generative video models for zero-shot optical flow extraction",
+          "authors": "Seungwoo Kim, Khai Loong Aw, Klemen Kotar, Cristobal Eyzaguirre, Wanhee Lee, Yunong Liu, Jared Watrous, Stefan Stojanov, Juan Carlos Niebles, Jiajun Wu, Daniel L. K. Yamins",
+          "venue": "arXiv 2025",
+          "arxiv": "https://arxiv.org/abs/2507.09082"
+        },
+        {
+          "title": "Understanding Physical Dynamics with Counterfactual World Modeling",
+          "authors": "Rahul Venkatesh, Honglin Chen, Kevin Feigelis, Daniel M. Bear, Khaled Jedoui, Klemen Kotar, Felix Binder, Wanhee Lee, Sherry Liu, Kevin A. Smith, Judith E. Fan, Daniel L. K. Yamins",
+          "venue": "ECCV 2024",
+          "arxiv": "https://arxiv.org/abs/2312.06721",
+          "project": "https://neuroailab.github.io/cwm-physics/"
+        },
+        {
+          "title": "Unifying (Machine) Vision via Counterfactual World Modeling",
+          "authors": "Daniel M. Bear, Kevin Feigelis, Honglin Chen, Wanhee Lee, Rahul Venkatesh, Klemen Kotar, Alex Durango, Daniel L. K. Yamins",
+          "venue": "arXiv 2023",
+          "arxiv": "https://arxiv.org/abs/2306.01828"
+        }
+      ]
+    },
+    {
+      "name": "Unsupervised 3D Scene Representation Learning",
+      "papers": [
+        {
+          "title": "Unsupervised 3D Scene Representation Learning via Movable Object Inference",
+          "authors": "",
+          "venue": "OpenReview",
+          "link": "https://openreview.net/pdf?id=1QjCzP0KIw"
+        }
+      ]
+    }
+  ]
+}
