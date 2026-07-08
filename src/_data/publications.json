@@ -18,19 +18,19 @@
       ]
     },
     {
-      "name": "Physical World Modeling from Scratch",
+      "name": "World Modeling from Scratch",
       "papers": [
-        {
-          "title": "Physical Object Understanding with a Physically Controllable World Model",
-          "authors": "Rahul Venkatesh, Klemen Kotar, Lilian Naing Chen, Wanhee Lee, Gia Ancone, Seungwoo Kim, Luca Thomas Wheeler, Jared Watrous, Honglin Chen, Daniel Bear, Stefan Stojanov, Daniel L. K. Yamins",
-          "venue": "CVPR 2026 (Highlight)",
-          "arxiv": "https://arxiv.org/abs/2606.00439"
-        },
         {
           "title": "World Modeling with Probabilistic Structure Integration",
           "authors": "Klemen Kotar, Wanhee Lee, Rahul Venkatesh, Honglin Chen, Daniel Bear, Jared Watrous, Simon Kim, Khai Loong Aw, Lilian Naing Chen, Stefan Stojanov, Kevin Feigelis, Imran Thobani, Alex Durango, Khaled Jedoui, Atlas Kazemian, Dan Yamins",
           "venue": "arXiv 2025",
           "arxiv": "https://arxiv.org/abs/2509.09737"
+        },
+        {
+          "title": "Physical Object Understanding with a Physically Controllable World Model",
+          "authors": "Rahul Venkatesh, Klemen Kotar, Lilian Naing Chen, Wanhee Lee, Gia Ancone, Seungwoo Kim, Luca Thomas Wheeler, Jared Watrous, Honglin Chen, Daniel Bear, Stefan Stojanov, Daniel L. K. Yamins",
+          "venue": "CVPR 2026 (Highlight)",
+          "arxiv": "https://arxiv.org/abs/2606.00439"
         },
         {
           "title": "Discovering and using Spelke segments",

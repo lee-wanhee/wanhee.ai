@@ -90,6 +90,7 @@ main { flex: 1 0 auto; }
   margin-bottom: 3rem;
 }
 .intro p { margin: 0; }
+.intro p + p { margin-top: 0.9rem; }
 .intro strong { color: var(--heading); font-weight: 620; }
 
 /* ---- publications ---- */
