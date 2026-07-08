@@ -3,10 +3,9 @@
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 email: wanhee.ai@gmail.com # your email address
 github_username: lee-wanhee # your GitHub username
-rss_icon: true # comment this line to hide the RSS icon
+x_username: lee_wanhee_ # your X/Twitter handle (without @)
 # --- Fill these in when you have them, then uncomment: ---
 # cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file (drop the file in assets/pdf/)
 # scholar_userid: XXXXXXXXXXXX # your Google Scholar ID
 # linkedin_username: # your LinkedIn username
-# x_username: # your X/Twitter handle (without @)
 # orcid_id: # your ORCID iD
