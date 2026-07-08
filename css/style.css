@@ -42,6 +42,8 @@ body {
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-dim); text-decoration: underline; text-underline-offset: 2px; }
 
+.muted { color: var(--muted); }
+
 /* ---- header ---- */
 .site-header {
   display: flex;
