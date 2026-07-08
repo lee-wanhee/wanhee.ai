@@ -87,6 +87,7 @@ main { flex: 1 0 auto; }
 .intro {
   font-size: 1.06rem;
   color: var(--fg);
+  margin-bottom: 3rem;
 }
 .intro p { margin: 0; }
 .intro strong { color: var(--heading); font-weight: 620; }
