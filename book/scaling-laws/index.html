@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Compute, Data, and Parameters · Wanhee Lee</title>
+    <meta name="description" content="Personal website and blog of Wanhee Lee — PhD candidate at Stanford working on world models and 3D scene understanding." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="Compute, Data, and Parameters" />
+    <meta property="og:description" content="Personal website and blog of Wanhee Lee — PhD candidate at Stanford working on world models and 3D scene understanding." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌊</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="wrap wrap-wide">
+      <header class="site-header">
+        <a class="brand" href="/">Wanhee Lee</a>
+        <nav class="nav">
+          <a href="/">Writing</a>
+          <a href="/research/">Research</a>
+        </nav>
+      </header>
+
+      <main><div class="book">
+  <aside class="book-sidebar">
+    <a class="book-side-title" href="/book/">Introduction to Foundation Models</a>
+    <nav class="book-toc">
+      
+        <div class="book-part">I · The Bitter Lesson</div>
+        <ul><li><a href="/book/bitter-lesson/">Why Learning Wins</a></li></ul>
+      
+        <div class="book-part">II · Scaling Laws</div>
+        <ul><li class="current"><a href="/book/scaling-laws/">Compute, Data, and Parameters</a></li></ul>
+      
+        <div class="book-part">III · Discrete Data</div>
+        <ul><li><a href="/book/discrete-data/">Autoregressive Language Models</a></li></ul>
+      
+        <div class="book-part">IV · Continuous Data</div>
+        <ul><li><a href="/book/continuous-data/">Diffusion and Perception</a></li></ul>
+      
+        <div class="book-part">V · Multimodal</div>
+        <ul><li><a href="/book/multimodal/">Unifying Modalities</a></li><li><a href="/book/world-models/">Toward World Models</a></li></ul>
+      
+    </nav>
+  </aside>
+
+  <article class="book-content">
+    <div class="book-crumb">Part II · Scaling Laws</div>
+    <h1 class="book-h1">Compute, Data, and Parameters</h1>
+    <div class="post-body"><p>If general methods win as we add computation, the natural next question is <em>how much</em> they win,
+and <em>how predictably</em>. Scaling laws answer this: across many orders of magnitude, loss falls as a
+power law in model size, dataset size, and compute.</p>
+<p class="katex-block"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>N</mi><mo stretchy="false">)</mo><mo>≈</mo><msub><mi>L</mi><mi mathvariant="normal">∞</mi></msub><mo>+</mo><msup><mrow><mo fence="true">(</mo><mfrac><msub><mi>N</mi><mi>c</mi></msub><mi>N</mi></mfrac><mo fence="true">)</mo></mrow><msub><mi>α</mi><mi>N</mi></msub></msup></mrow><annotation encoding="application/x-tex">L(N) \approx L_\infty + \left( \frac{N_c}{N} \right)^{\alpha_N}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">L</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≈</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">L</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">∞</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:2.4543em;vertical-align:-0.95em;"></span><span class="minner"><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3603em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.109em;">N</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.109em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.1514em;"><span style="top:-2.55em;margin-left:-0.109em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.5043em;"><span style="top:-3.9029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567em;margin-left:-0.0037em;margin-right:0.0714em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathnormal mtight" style="margin-right:0.109em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1433em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>This chapter builds these relationships from first principles and asks what they do — and do not —
+promise.</p>
+<p><em>(Draft — chapter outline only.)</em></p>
+</div>
+
+    
+    
+    <nav class="book-pager">
+      <a class="prev" href="/book/bitter-lesson/">← Why Learning Wins</a>
+      <a class="next" href="/book/discrete-data/">Autoregressive Language Models →</a>
+    </nav>
+  </article>
+</div>
+</main>
+    </div>
+  </body>
+</html>
