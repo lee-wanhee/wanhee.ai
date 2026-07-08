@@ -1,0 +1,12 @@
+{
+  "title": "Introduction to Foundation Models",
+  "subtitle": "From the Bitter Lesson to Multimodal Intelligence",
+  "author": "Wanhee Lee",
+  "parts": [
+    { "num": "I", "name": "The Bitter Lesson" },
+    { "num": "II", "name": "Scaling Laws" },
+    { "num": "III", "name": "Discrete Data" },
+    { "num": "IV", "name": "Continuous Data" },
+    { "num": "V", "name": "Multimodal" }
+  ]
+}

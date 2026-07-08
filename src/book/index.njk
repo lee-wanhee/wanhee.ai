@@ -1,0 +1,27 @@
+---
+layout: base
+title: Introduction to Foundation Models
+permalink: /book/
+noindex: true
+---
+<section class="book-cover">
+  <div class="book-kicker">An online book · draft</div>
+  <h1 class="book-cover-title">{{ book.title }}</h1>
+  <p class="book-cover-sub">{{ book.subtitle }}</p>
+  <p class="book-cover-author">{{ book.author }}</p>
+  <p class="book-cover-begin"><a href="{{ collections.chapters[0].url }}">Begin reading →</a></p>
+
+  <div class="book-contents">
+    <h2 class="section-title">Contents</h2>
+    {% for part in book.parts %}
+      <div class="book-part">{{ part.num }} · {{ part.name }}</div>
+      <ol class="book-contents-list">
+        {%- for ch in collections.chapters -%}
+          {%- if ch.data.part == part.name -%}
+            <li><a href="{{ ch.url }}">{{ ch.data.title }}</a></li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ol>
+    {% endfor %}
+  </div>
+</section>

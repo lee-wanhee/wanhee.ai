@@ -1,0 +1,35 @@
+---
+layout: base
+wide: true
+noindex: true
+---
+<div class="book">
+  <aside class="book-sidebar">
+    <a class="book-side-title" href="/book/">{{ book.title }}</a>
+    <nav class="book-toc">
+      {% for part in book.parts %}
+        <div class="book-part">{{ part.num }} · {{ part.name }}</div>
+        <ul>
+          {%- for ch in collections.chapters -%}
+            {%- if ch.data.part == part.name -%}
+              <li{% if ch.url == page.url %} class="current"{% endif %}><a href="{{ ch.url }}">{{ ch.data.title }}</a></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {% endfor %}
+    </nav>
+  </aside>
+
+  <article class="book-content">
+    <div class="book-crumb">Part {{ partNum }} · {{ part }}</div>
+    <h1 class="book-h1">{{ title }}</h1>
+    <div class="post-body">{{ content | safe }}</div>
+
+    {% set prev = collections.chapters | getPreviousCollectionItem %}
+    {% set next = collections.chapters | getNextCollectionItem %}
+    <nav class="book-pager">
+      {% if prev %}<a class="prev" href="{{ prev.url }}">← {{ prev.data.title }}</a>{% else %}<span></span>{% endif %}
+      {% if next %}<a class="next" href="{{ next.url }}">{{ next.data.title }} →</a>{% endif %}
+    </nav>
+  </article>
+</div>

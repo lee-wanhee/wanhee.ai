@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="description" content="{{ description or site.description }}" />
+    {% if noindex %}<meta name="robots" content="noindex, nofollow" />{% endif %}
     <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}" />
     <meta property="og:description" content="{{ description or site.description }}" />
     <meta property="og:type" content="website" />
@@ -16,7 +17,7 @@
     />
   </head>
   <body>
-    <div class="wrap">
+    <div class="wrap{% if wide %} wrap-wide{% endif %}">
       <header class="site-header">
         <a class="brand" href="/">{{ site.name }}</a>
         <nav class="nav">

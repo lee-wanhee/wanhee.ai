@@ -20,6 +20,11 @@ module.exports = function (eleventyConfig) {
     c.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date)
   );
 
+  // book chapters in reading order
+  eleventyConfig.addCollection("chapters", (c) =>
+    c.getFilteredByGlob("src/book/chapters/*.md").sort((a, b) => a.data.order - b.data.order)
+  );
+
   // "July 8, 2026"
   eleventyConfig.addFilter("readableDate", (d) =>
     new Date(d).toLocaleDateString("en-US", {
