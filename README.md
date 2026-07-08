@@ -1,7 +1,7 @@
 # wanhee.ai
 
 Personal website + blog for Wanhee Lee, live at **https://wanhee.ai**.
-Custom, minimal, dark theme. Static site built with **Eleventy (11ty)**.
+Custom, minimal theme with a light/dark toggle (default: light). Static site built with **Eleventy (11ty)**.
 
 ---
 
@@ -35,7 +35,7 @@ src/
     base.njk             # page shell: header nav, <head>, KaTeX CSS, noindex flag
     post.njk             # blog post layout
     book-chapter.njk     # book chapter layout (sidebar TOC + prev/next)
-  css/style.css          # the entire theme (dark, minimal)
+  css/style.css          # the entire theme (light default + dark via html[data-theme="dark"])
   index.njk              # home (links line + Writing list)
   research.njk           # Research page (renders publications.json)
   posts/*.md             # blog posts

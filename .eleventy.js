@@ -25,6 +25,9 @@ module.exports = function (eleventyConfig) {
     c.getFilteredByGlob("src/book/chapters/*.md").sort((a, b) => a.data.order - b.data.order)
   );
 
+  // current year for the footer copyright (evaluated at build time)
+  eleventyConfig.addGlobalData("year", () => new Date().getFullYear());
+
   // "July 8, 2026"
   eleventyConfig.addFilter("readableDate", (d) =>
     new Date(d).toLocaleDateString("en-US", {
