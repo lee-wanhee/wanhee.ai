@@ -1,15 +1,20 @@
 {
+  "name": "wanhee-ai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal website and blog — wanhee.ai",
   "scripts": {
-    "lint:prettier": "prettier . --check",
-    "lint:style-contract": "node test/style_contract.js",
-    "test:visual": "playwright test --config test/visual/playwright.config.js",
-    "test:visual:update": "playwright test --config test/visual/playwright.config.js --update-snapshots"
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
   },
   "devDependencies": {
-    "@playwright/test": "^1.56.1",
-    "@shopify/prettier-plugin-liquid": "^1.10.0",
-    "pixelmatch": "^7.1.0",
-    "pngjs": "^7.0.0",
-    "prettier": "^3.8.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0"
+  },
+  "dependencies": {
+    "@vscode/markdown-it-katex": "^1.1.2",
+    "katex": "^0.17.0",
+    "markdown-it": "^14.3.0"
   }
 }

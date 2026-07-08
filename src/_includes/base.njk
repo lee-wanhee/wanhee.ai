@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if title %}{{ title }} · {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+    <meta name="description" content="{{ description or site.description }}" />
+    <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.name }}{% endif %}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.17.0/dist/katex.min.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-header">
+        <a class="brand" href="/">{{ site.name }}</a>
+        <nav class="nav">
+          <a href="/">Writing</a>
+          <a href="/research/">Research</a>
+          <a href="{{ site.github }}" rel="me">GitHub</a>
+          <a href="{{ site.twitter }}" rel="me">X</a>
+          <a href="mailto:{{ site.email }}">Email</a>
+        </nav>
+      </header>
+
+      <main>{{ content | safe }}</main>
+    </div>
+  </body>
+</html>
