@@ -1,0 +1,16 @@
+---
+layout: study-note
+title: Material title
+topic: General
+order: 1
+materialUrl: https://example.com
+materialLabel: Read the material
+permalink: /study/material-slug/
+---
+
+Optional notes go here. Delete everything below the front matter if you only
+want to save the link.
+
+## Key idea
+
+Write in Markdown. Math works too: $E = mc^2$.

@@ -31,10 +31,12 @@ src/
     site.json            # name, email, socials, advisor/neuroailab/oldsite URLs
     publications.json    # Research page papers, grouped by theme
     book.json            # book title/subtitle/author + part list
+    study.json           # study page title + topic list
   _includes/
     base.njk             # page shell: header nav, <head>, KaTeX CSS, noindex flag
     post.njk             # blog post layout
     book-chapter.njk     # book chapter layout (sidebar TOC + prev/next)
+    study-note.njk       # study note layout (sidebar + source link)
   css/style.css          # the entire theme (light default + dark via html[data-theme="dark"])
   index.njk              # home (links line + Writing list)
   research.njk           # Research page (renders publications.json)
@@ -42,6 +44,9 @@ src/
   book/
     index.njk            # book cover / table of contents  (/book/)
     chapters/*.md        # book chapters
+  study/
+    index.njk            # study-material index (/study/)
+    notes/*.md           # source links with optional Markdown notes
 CNAME                    # custom domain (wanhee.ai) — do not delete
 .eleventy.js             # config: collections (posts, chapters), KaTeX, filters
 ```
@@ -87,6 +92,16 @@ Chapter body in Markdown. Math: `$...$` inline, `$$...$$` display.
 ```
 
 To add/rename a **part**, edit `src/_data/book.json`.
+
+## How to add study material
+
+Copy `src/study/notes/_template.md.txt` to `src/study/notes/NN-slug.md`, then
+set its title, topic, order, source URL, and permalink. Notes below the front
+matter are optional; leave the body empty for a link-only entry.
+
+To add or rename a topic, edit `src/_data/study.json`. The study section is
+unlisted and excluded from search engines, like the draft book. Open it directly
+at `https://wanhee.ai/study/`.
 
 ## Math & code
 

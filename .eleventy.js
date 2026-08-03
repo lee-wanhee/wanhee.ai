@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
     c.getFilteredByGlob("src/book/chapters/*.md").sort((a, b) => a.data.order - b.data.order)
   );
 
+  // study materials/notes in display order
+  eleventyConfig.addCollection("studyNotes", (c) =>
+    c.getFilteredByGlob("src/study/notes/*.md").sort((a, b) => a.data.order - b.data.order)
+  );
+
   // current year for the footer copyright (evaluated at build time)
   eleventyConfig.addGlobalData("year", () => new Date().getFullYear());
 

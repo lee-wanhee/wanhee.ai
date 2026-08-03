@@ -1,0 +1,31 @@
+---
+layout: base
+wide: true
+noindex: true
+---
+<div class="book">
+  <aside class="book-sidebar">
+    <a class="book-side-title" href="/study/">{{ study.title }}</a>
+    <nav class="book-toc">
+      {% for topic in study.topics %}
+        <div class="book-part">{{ topic.name }}</div>
+        <ul>
+          {%- for note in collections.studyNotes -%}
+            {%- if note.data.topic == topic.name -%}
+              <li{% if note.url == page.url %} class="current"{% endif %}><a href="{{ note.url }}">{{ note.data.title }}</a></li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {% endfor %}
+    </nav>
+  </aside>
+
+  <article class="book-content">
+    <div class="book-crumb">{{ topic }}</div>
+    <h1 class="book-h1">{{ title }}</h1>
+    <p class="study-source">
+      <a href="{{ materialUrl }}" target="_blank" rel="noopener">{{ materialLabel or "Open study material" }} ↗</a>
+    </p>
+    {% if content | trim %}<div class="post-body">{{ content | safe }}</div>{% endif %}
+  </article>
+</div>

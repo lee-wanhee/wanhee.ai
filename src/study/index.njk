@@ -1,0 +1,33 @@
+---
+layout: base
+title: Study Notes
+permalink: /study/
+noindex: true
+---
+<section class="book-cover">
+  <div class="book-kicker">Personal study log</div>
+  <h1 class="book-cover-title">{{ study.title }}</h1>
+  <p class="book-cover-sub">{{ study.description }}</p>
+
+  <div class="book-contents">
+    {% if collections.studyNotes.length %}
+      <h2 class="section-title">Materials</h2>
+      {% for topic in study.topics %}
+        <div class="book-part">{{ topic.name }}</div>
+        <ul class="study-contents-list">
+          {%- for note in collections.studyNotes -%}
+            {%- if note.data.topic == topic.name -%}
+              <li>
+                <a href="{{ note.url }}">{{ note.data.title }}</a>
+                <a class="study-external" href="{{ note.data.materialUrl }}" target="_blank" rel="noopener" aria-label="Open source material">↗</a>
+                {% if not note.templateContent | trim %}<span class="study-link-only">link</span>{% endif %}
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      {% endfor %}
+    {% else %}
+      <p class="study-empty">No materials yet.</p>
+    {% endif %}
+  </div>
+</section>
