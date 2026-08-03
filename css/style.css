@@ -246,6 +246,25 @@ main { flex: 1 0 auto; }
 }
 .book-contents-list li { margin: 0.35rem 0; font-size: 1.02rem; }
 
+/* study notes reuse the book reading layout */
+.study-source {
+  margin: -0.8rem 0 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.92rem;
+}
+.study-contents-list { list-style: none; margin: 0 0 0.4rem; padding: 0; }
+.study-contents-list li { margin: 0.45rem 0; font-size: 1.02rem; }
+.study-external { margin-left: 0.35rem; color: var(--muted); font-size: 0.85rem; }
+.study-link-only {
+  margin-left: 0.55rem;
+  color: var(--muted);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.study-empty { color: var(--muted); }
+
 @media (max-width: 780px) {
   .book { flex-direction: column; gap: 1.5rem; }
   .book-sidebar {
